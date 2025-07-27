@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#0b0624;
+    color:#fff;
+
+}
+.container{
+    width: 90%;
+    max-width: 600px;
+}
+.title{
+    position: relative;
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 15px;
+}
+.title::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    bottom: 0;
+    left: calc(50% - 25px);
+    background: #615f5f;
+}
+.button-wrapper{
+ margin-top: 30px;
+ display: grid;
+ grid-template-columns: repeat(3, auto);
+ gap: 20px;
+ justify-content: center;
+}
+.btn{
+    padding: 15px 30px;
+    margin: 15px;
+    background-color: mediumseagreen;
+    border: none;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    color: #fff;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+}
+.btn10{
+    grid-column: 1/-1;
+    justify-self: center;
+}
+.btn{
+    box-shadow: inset 0 0 0 0 #303439;
+}
+.btn1:hover{
+ box-shadow: inset 0 100px 0 0 #303439;
+}
+.btn2:hover{
+ box-shadow: inset 0 -100px 0 0 #303439;
+}
+.btn3:hover{
+    box-shadow: inset 200px 0 0 0 #303439;
+}
+.btn4:hover{
+    box-shadow: inset -200px  0 0 0 #303439;
+}
+.btn5:hover{
+    box-shadow: inset 0 0 0 50px #303439;
+}
+.btn6:hover{
+    box-shadow: inset 0 0 0 50px mediumseagreen;
+}
+.btn7:hover{
+    box-shadow: inset 200px 25px 0 0 #303439;
+}
+.btn8:hover{
+    box-shadow: inset -200px -50px 0 50px #303439;
+}
+.btn9:hover{
+    box-shadow: inset 0 0 200px 0 #303439;
+}
+.btn10{
+    box-shadow: inset 0 0 200px 0  mediumseagreen;
+    background: #303439;
+}
+.btn10:hover{
+    box-shadow: inset 0 0 200px 0 #303439;
+}
+@media screen and (max-width: 600px){
+.button-wrapper{
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+}
+.btn{
+    padding: 10px 15px;
+}
+.btn10{
+    grid-column: auto;       /*removes full-row span */
+    justify-self: auto;     /*removes manual centering */
+}
+}
